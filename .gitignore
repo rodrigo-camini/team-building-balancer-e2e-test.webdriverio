@@ -1,0 +1,7 @@
+node_modules
+**/**.png
+.env
+**/**.log
+**/**.json
+allure-results/
+reports/
