@@ -8,7 +8,7 @@ export default class LoginElements {
     /**
      * Mapping of the password field element
      */
-    get inpPassword() { return $("aria/Password") }
+    get inpPassword() { return $("aria/Senha") }
 
     /**
      * Mapping of the login button element

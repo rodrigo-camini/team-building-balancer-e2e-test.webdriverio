@@ -1,4 +1,5 @@
 import type { Options } from '@wdio/types'
+
 require('dotenv').config();
 import path from 'path'
 
@@ -17,8 +18,7 @@ export const config: WebdriverIO.Config = {
     tsConfigPath: './tsconfig.json',
 
     specs: [
-        // './test/specs/**/*.ts',
-        './tests/login/login.test.ts'
+        './tests/**/*.ts',
     ],
     suites: {
         login: [
@@ -38,15 +38,16 @@ export const config: WebdriverIO.Config = {
     maxInstances: 10,
 
     capabilities: [
-        // {
-        //     browserName: 'chrome',
-        //     'goog:chromeOptions': {
-        //         args: [
-        //             '--window-size=1400,1050',
-        //             'disable-gpu'
-        //         ]
-        //     }
-        // },
+        {
+            browserName: 'chrome',
+            'goog:chromeOptions': {
+                args: [
+                    '--window-size=1400,1050', // Defina o tamanho da janela do navegador
+                    'disable-gpu', // Se necessário, desative a aceleração de GPU
+                    //'--headless', // Opcional, se você quiser rodar os testes sem abrir a janela do navegador
+                ],
+            },
+        },
         // {
         //     browserName: 'firefox',
         //     'moz:firefoxOptions': {
@@ -61,9 +62,6 @@ export const config: WebdriverIO.Config = {
                 ]
             }
         },
-        // {
-        //     browserName: 'MicrosoftEdge'
-        // }
     ],
 
     logLevel: 'silent',
@@ -97,6 +95,22 @@ export const config: WebdriverIO.Config = {
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
+    },
+
+    /**
+    * Function to be executed before a test (in Mocha/Jasmine) starts.
+    */
+    beforeTest: async function (test, context) {
+        // Verifica a variável de ambiente MOBILE
+        const mobileEnabled = process.env.MOBILE === 'true';
+        console.log(`MOBILE is set to: ${mobileEnabled}`);
+
+        if (mobileEnabled) {
+            // Emula o dispositivo móvel usando o nome do dispositivo
+            await browser.emulate('device', 'iPhone 14 Plus');
+        } else {
+            console.log('Mobile emulation is disabled');
+        }
     },
 
     afterTest: async function (test, context, { error, result, duration, passed, retries }) {
