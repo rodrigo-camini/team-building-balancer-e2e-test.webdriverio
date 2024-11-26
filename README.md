@@ -34,7 +34,8 @@ This structure promotes clean, modular, and scalable test code, making it easier
 
 Setup webdriverio
 
-```$ npm init wdio@latest .
+```
+$ npm init wdio@latest .
 Need to install the following packages:
 create-wdio@8.4.10
 Ok to proceed? (y)
