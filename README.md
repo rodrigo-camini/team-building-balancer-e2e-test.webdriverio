@@ -34,7 +34,7 @@ This structure promotes clean, modular, and scalable test code, making it easier
 
 Setup webdriverio
 
-$ npm init wdio@latest .
+```$ npm init wdio@latest .
 Need to install the following packages:
 create-wdio@8.4.10
 Ok to proceed? (y)
@@ -46,7 +46,6 @@ Ok to proceed? (y)
 
 Installing @wdio/cli to initialize project...
 ✔ Success!
-
 
 🤖 WDIO Configuration Wizard 🧙
 
@@ -102,7 +101,7 @@ Join our Discord Community Server and instantly find answers to your issues or q
 
 Visit the project on GitHub to report bugs 🐛 or raise feature requests 💡:
   🔗 https://github.com/webdriverio/webdriverio
-
+```
 
 ## Configurations
 
@@ -111,14 +110,22 @@ Visit the project on GitHub to report bugs 🐛 or raise feature requests 💡:
 
 Preferably, use the **Git Bash** terminal to run commands for this project. 
 
+```
 EMAIL="your email here"
 PASSWORD="your password here"
+```
 
 3. Save the file.
 
 ## Installation Instructions
-Run the command at the root of the project: npm install
+Run the command at the root of the project: 
+```npm install```
 
 ## Execution test
-Run the command npm run wdio
+Run the command to execute all tests created on framework
 
+```npm run wdio```
+
+Run the command to execute a specific suite of test created on package.json
+
+```npm run testSuite```
