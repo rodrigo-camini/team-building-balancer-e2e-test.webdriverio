@@ -1,17 +1,17 @@
 export default class MenuElements {
 
     /**
-     * Mapeamento do botão do menu da página
+     * Mapping of the page's menu button
      */
     get btnMenu() { return $("=Abrir menu de navegação") }
 
     /**
-     * Mapeamento do texto com o nome do usuário logado
+     * Mapping of the logged-in user's name label
      */
     get lblUserLogged() { return $("flt-semantics[role='group']") }
 
     /**
-     * Mapeamento do botão de [Sign Out]
+     * Mapping of the [Sign Out] button
      */
     get btnSignOut() { return $("=Sign Out") }
 

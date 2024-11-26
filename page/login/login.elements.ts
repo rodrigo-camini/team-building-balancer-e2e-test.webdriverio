@@ -1,17 +1,17 @@
 export default class LoginElements {
 
     /**
-     * Mapeamento do elemento do campo de e-mail
+     * Mapping of the email field element
      */
     get inpEmail() { return $("aria/Email") }
 
     /**
-     * Mapeamento do elemento do campo de senha
+     * Mapping of the password field element
      */
-    get inpPassword() { return $("aria/Senha") }
+    get inpPassword() { return $("aria/Password") }
 
     /**
-     * Mapeamento do elemento do botão de entrar
+     * Mapping of the login button element
      */
     get btnEnter() { return $(`flt-semantics-container > flt-semantics[role="button"]:nth-child(3)`) }
 

@@ -1,7 +1,8 @@
 export default class SportElements {
 
     /**
-     * Mapeamento do elemento de texto do título da pagina de sports
+     * Mapping of the text element for the sports page title
      */
+
     get lblHeading() { return $("[role='heading']") }
 }

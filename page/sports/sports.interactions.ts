@@ -5,7 +5,7 @@ const heading = 'Balanceador de Times'
 export default class SportInteractions extends SportElements {
 
     /**
-     * Método para aguardar a tela do sports carregar
+     * Method to wait for the sports page to load
      */
     public async waitForSportPage() {
         let element = super.lblHeading
@@ -19,7 +19,7 @@ export default class SportInteractions extends SportElements {
     }
 
     /**
-     * Método para retornar o valor do título da pagina de sports
+     * Method to return the value of the sports page title
      * @returns 
      */
     public async getTextLblHeading() {

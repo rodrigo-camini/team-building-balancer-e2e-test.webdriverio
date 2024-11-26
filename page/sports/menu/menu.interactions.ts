@@ -6,28 +6,28 @@ const clickCustomCommands = new ClickCustomCommands()
 export default class MenuInteractions extends MenuElements {
 
     /**
-     * Método para clicar no menu da tela de sports
+     * Method to click on the sports screen menu
      */
     protected async clickBtnMenu() {
         await clickCustomCommands.waitForDisplayedElementAndClick(await super.btnMenu, 'Menu')
     }
 
     /**
-     * Método para clicar no botão de Sign Out do menu da tela de sports
+     * Method to click the Sign Out button in the sports screen menu
      */
     protected async clickBtnSignOut() {
         await clickCustomCommands.waitForDisplayedElementAndClick(await super.btnSignOut, 'Sing Out')
     }
 
     /**
-     * Mapeamente para esperar o botão de Sign Out do menu.
+     * Mapping to wait for the Sign Out button in the menu.
      */
     protected async waitBtnSignOut() {
         await super.btnSignOut.waitForDisplayed()
     }
 
     /**
-     * Método para retornar o nome do usuário logado.
+     * Method to return the logged-in user's name.
      * @returns 
      */
     protected async getTextLblUserLogged() {

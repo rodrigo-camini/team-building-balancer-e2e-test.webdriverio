@@ -10,9 +10,10 @@ const keyHelpers = new KeyHelpers()
 export default class LoginInteractions extends LoginElements {
 
     /**
-     * Método para inserir valor no campo de e-mail do login
-     * @param email 
-     */
+      * Method to enter a value in the email field of the login
+      * @param email
+      */
+
     protected async setInpEmail(email: string) {
         await clickCustomCommands.waitForDisplayedElementAndClick(await super.inpEmail, 'E-mail')
         await this.inpEmail.addValue(email)

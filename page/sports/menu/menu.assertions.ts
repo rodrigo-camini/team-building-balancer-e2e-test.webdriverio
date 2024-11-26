@@ -1,9 +1,9 @@
 import MenuInteractions from "./menu.interactions"
 
-export default class MenuQuestions extends MenuInteractions {
+export default class MenuAssertions extends MenuInteractions {
 
     /**
-     * Método para abrir no menu da tela de sports
+     * Method to open the menu on the sports screen
      */
     public async isTheLoggedUser(userLoggedIn: string) {
         expect(await super.getTextLblUserLogged()).toBe(userLoggedIn)

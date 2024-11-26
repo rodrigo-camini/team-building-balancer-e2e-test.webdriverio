@@ -2,11 +2,11 @@ import SportInteractions from "./sports.interactions"
 
 const heading = 'Balanceador de Times'
 
-export default class SportQuestions extends SportInteractions {
+export default class SportAssertions extends SportInteractions {
 
     /**
-     * Método para validar o título da página de Sports
-     * @param title - Título da página
+     * Method to validate the title of the Sports page
+     * @param title - Page title
      */
     public async isTheTitleEqual(title: string) {
         await super.waitForSportPage()

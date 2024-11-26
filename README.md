@@ -1,6 +1,31 @@
 # team-building-balancer-e2e-test.webdriverio
 This repository hosts an end-to-end (E2E) Test Automation Framework designed for a web application built with Flutter.
 
+## Technologies
+
+This project utilizes the following technologies:
+
+- **WebDriverIO**: A popular WebDriver implementation for Node.js, used for automating web browsers.
+- **TypeScript**: A typed superset of JavaScript, offering better tooling and type safety.
+- **Mocha**: A testing framework that runs on Node.js, used for executing tests in this project.
+- **Allure Reports**: A framework for generating test reports that provide detailed insights into the results of the executed tests.
+
+## Design Pattern
+
+This project is based on the **Page Object Pattern**, which helps to structure the tests in a more maintainable and readable manner. The folder structure is organized as follows:
+
+- **Data**: Contains test data and configurations used across multiple test cases.
+- **Interfaces**: Defines TypeScript interfaces for better type safety and to ensure proper data structures are used in the tests.
+- **Page**: This folder contains the core of the Page Object Pattern, divided into:
+  - **Actions**: Methods that perform actions on the web page (e.g., click buttons, submit forms).
+  - **Interactions**: Methods that represent user interactions with the web page (e.g., hover, drag).
+  - **Elements**: The elements located on the web page (e.g., buttons, input fields).
+- **Reports**: Contains configurations and files for generating test reports using Allure.
+- **Tests**: Contains the actual test scripts, which use the Page Objects to interact with the application.
+- **Utils**: Contains utility functions or helper methods that are used across the project, such as functions for data manipulation or waiting.
+
+This structure promotes clean, modular, and scalable test code, making it easier to maintain and extend over time.
+
 ## Requirements
 
 - Node.js >= 22
@@ -13,46 +38,6 @@ $ npm init wdio@latest .
 Need to install the following packages:
 create-wdio@8.4.10
 Ok to proceed? (y)
-
-                 -:...........................-:.
-                 +                              +
-              `` +      `...`        `...`      + `
-            ./+/ +    .:://:::`    `::///::`  ` + ++/.
-           .+oo+ +    /:+ooo+-/    /-+ooo+-/ ./ + +oo+.
-           -ooo+ +    /-+ooo+-/    /-+ooo+-/ .: + +ooo.
-            -+o+ +    `::///:-`    `::///::`    + +o+-
-             ``. /.     `````        `````     .: .``
-                  .----------------------------.
-           `-::::::::::::::::::::::::::::::::::::::::-`
-          .+oooo/:------------------------------:/oooo+.
-      `.--/oooo-                                  :oooo/--.`
-    .::-``:oooo`                                  .oooo-``-::.
-  ./-`    -oooo`--.: :.--                         .oooo-    `-/.
- -/`    `-/oooo////////////////////////////////////oooo/.`    `/-
-`+`   `/+oooooooooooooooooooooooooooooooooooooooooooooooo+:`   .+`
--/    +o/.:oooooooooooooooooooooooooooooooooooooooooooo:-/o/    +.
--/   .o+  -oooosoooososssssooooo------------------:oooo- `oo`   +.
--/   .o+  -oooodooohyyssosshoooo`                 .oooo-  oo.   +.
--/   .o+  -oooodooysdooooooyyooo` `.--.``     .:::-oooo-  oo.   +.
--/   .o+  -oooodoyyodsoooooyyooo.//-..-:/:.`.//.`./oooo-  oo.   +.
--/   .o+  -oooohsyoooyysssysoooo+-`     `-:::.    .oooo-  oo.   +.
--/   .o+  -ooooosooooooosooooooo+//////////////////oooo-  oo.   +.
--/   .o+  -oooooooooooooooooooooooooooooooooooooooooooo-  oo.   +.
--/   .o+  -oooooooooooooooooooooooooooooooooooooooooooo-  oo.   +.
--+////o+` -oooo---:///:----://::------------------:oooo- `oo////+-
-+ooooooo/`-oooo``:-```.:`.:.`.+/-    .::::::::::` .oooo-`+ooooooo+
-oooooooo+`-oooo`-- `/` .:+  -/-`/`   .::::::::::  .oooo-.+oooooooo
-+-/+://-/ -oooo-`:`.o-`:.:-````.:    .///:``````  -oooo-`/-//:+:-+
-: :..--:-:.+ooo+/://o+/-.-:////:-....-::::-....--/+ooo+.:.:--.-- /
-- /./`-:-` .:///+/ooooo/+///////////////+++ooooo/+///:. .-:.`+./ :
-:-:/.           :`ooooo`/`              .:.ooooo :           ./---
-                :`ooooo`/`              .:.ooooo :
-                :`ooooo./`              .:-ooooo :
-                :`ooooo./`              .:-ooooo :
-            `...:-+++++:/.              ./:+++++-:...`
-           :-.````````/../              /.-:````````.:-
-          -/::::::::://:/+             `+/:+::::::::::+.
-          :oooooooooooo++/              +++oooooooooooo-
 
                            Webdriver.IO
               Next-gen browser and mobile automation
@@ -121,20 +106,19 @@ Visit the project on GitHub to report bugs 🐛 or raise feature requests 💡:
 
 ## Configurations
 
-1. Crie um arquivo na raiz do projeto chamado .env
-2. Adicione as seguintes variáveis 
+1. Create a file at the root of the project called .env.
+2. Add the following variables:
 
-bash
-EMAIL="seu email aqui"
-PASSWORD="sua senha aqui"
+Preferably, use the **Git Bash** terminal to run commands for this project. 
 
-3. Salve o arquivo.
+EMAIL="your email here"
+PASSWORD="your password here"
+
+3. Save the file.
 
 ## Installation Instructions
-
-Execute o comando na raiz do projeto: `npm install`
+Run the command at the root of the project: npm install
 
 ## Execution test
-
-Execute o comando `npm run wdio`
+Run the command npm run wdio
 

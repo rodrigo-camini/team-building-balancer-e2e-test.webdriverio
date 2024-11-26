@@ -1,12 +1,12 @@
 export default class OnboardingElements {
 
     /**
-     * Mapeamento do botão [Pular OnBoarding]
+     * Mapping of the [Skip OnBoarding] button
      */
     get btnSkipOnBoarding() { return $("//flt-semantics[contains(text(),'Pular OnBoarding')]") }
 
     /**
-     * Mapeamento do botão de [Criar uma super conta]
+     * Mapping of the [Create a Super Account] button
      */
     get btnCreateNewSuperAccount() { return $("//flt-semantics[contains(text(),'Criar Uma Super Conta')]") }
 

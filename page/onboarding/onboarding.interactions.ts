@@ -6,7 +6,7 @@ const clickCustomCommands = new ClickCustomCommands()
 export default class OnboardingInteractions extends OnboardingElements {
 
     /**
-     * Método para clicar no botão de [Pular OnBoarding]
+     * Method to click the [Skip OnBoarding] button
      */
     protected async clickBtnSkipOnBoarding() {
         await clickCustomCommands.waitForDisplayedElementAndClick(await super.btnSkipOnBoarding, "Pular OnBoarding")
@@ -17,7 +17,7 @@ export default class OnboardingInteractions extends OnboardingElements {
     }
 
     /**
-     * Método para aguardar o elemento do flutter web existir no html e depois aguardar ele ser exibido na tela.
+     * Method to wait for the flutter web element to exist in the HTML and then wait for it to be displayed on the screen.
      */
     protected async waitForFlutterWeb() {
         await this.flutterWeb.waitForExist()

@@ -7,15 +7,15 @@ const actionsHelpers = new ActionsHelpers()
 export default class OnboardingActions extends OnboardingInteractions {
 
     /**
-     * Método para abrir o site do team building balancer
-    */
+     * Method to open the Team Building Balancer website
+     */
     protected async openOnboarding() {
         await browser.url(`https://team-building-balancer.web.app`)
     }
 
     /**
-     * Método exibir os elementos html do flutter web na tela para interação do framework de testes
-     */
+      * Method to display the Flutter web HTML elements on the screen for interaction with the test framework
+      */
     public async waitLoadingElementsFlutterWeb() {
         await this.openOnboarding()
         await super.waitForFlutterWeb()
@@ -23,13 +23,15 @@ export default class OnboardingActions extends OnboardingInteractions {
     }
 
     /**
-     * Método para skipar a tela de onboarding
+     * Method to skip the onboarding screen
      */
     public async skipOnBoarding() {
         await super.clickBtnSkipOnBoarding()
     }
 
-    /** Método para skipar o onboarding e ir para tela de login */
+    /**
+     * Method to skip the onboarding and go to the login screen
+     */
     public async skipOnBoardingAndGoLogin() {
         await this.skipOnBoarding()
         await super.clickBtnCreateNewSuperAccount()
