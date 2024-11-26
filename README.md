@@ -123,10 +123,26 @@ Run the command at the root of the project:
 ```npm install```
 
 ## Execution test
-Run the command to execute all tests created on framework
+Run the command below to execute all tests created in the framework
 
 ```npm run wdio```
 
-Run the command to execute a specific suite of test created on package.json
+Run the command below to execute a specific suite of test created on package.json
 
 ```npm run testSuite```
+
+## Mobile Mode
+Run the command below to execute tests on Mobile version
+
+```MOBILE=true npm run testSuite```
+
+## Report
+Run the command below to open report of executed 
+
+```npm run report```
+
+
+
+
+
+
