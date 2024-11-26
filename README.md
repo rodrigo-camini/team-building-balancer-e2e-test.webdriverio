@@ -141,6 +141,18 @@ Run the command below to open report of executed
 
 ```npm run report```
 
+## How to Map Flutter elements
+
+To map Flutter elements, this document was used as a reference
+
+https://www.inflectra.com/Support/KnowledgeBase/KB774.aspx
+
+In the browser console, type this command below before starting the mapping flutter elements
+
+```
+const placeholder = document.querySelector("flt-semantics-placeholder");
+placeholder.click()
+```
 
 
 
